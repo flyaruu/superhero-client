@@ -23,7 +23,6 @@ async fn main() {
         let converted: Hero = hero.into();
         let id = converted.id;
         db.reducers.add_hero(converted).unwrap();
-        db.advance_one_message().unwrap();
         // sleep(Duration::from_millis(1));        
         println!("Hero: {} inserted. Id: {}", name, id);
     }
